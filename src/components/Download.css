@@ -1,0 +1,230 @@
+.download {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .download .section-title {
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+  
+  .download .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .download-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .download-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .download-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .download-card.windows {
+    border-top: 4px solid var(--primary);
+  }
+  
+  .download-card.source {
+    border-top: 4px solid #333;
+  }
+  
+  .card-header {
+    padding: 30px;
+    text-align: center;
+    background: #f8f9fa;
+  }
+  
+  .platform-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .windows .platform-icon {
+    color: var(--primary);
+  }
+  
+  .source .platform-icon {
+    color: #333;
+  }
+  
+  .card-header h3 {
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+  
+  .card-body {
+    padding: 30px;
+    color: var(--dark);
+  }
+  
+  .version {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+  
+  .size {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features-list li {
+    padding: 8px 0;
+    color: var(--dark-gray);
+    border-bottom: 1px solid #eee;
+  }
+  
+  .features-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .github-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .github-stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark);
+  }
+  
+  .github-stats .stat svg {
+    color: #f5b042;
+  }
+  
+  .source-description {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .card-footer {
+    padding: 30px;
+    background: #f8f9fa;
+    text-align: center;
+  }
+  
+  .download-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    position: relative;
+  }
+  
+  .download-btn.downloading {
+    background: var(--dark-gray);
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+  }
+  
+  .requirements {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+  }
+  
+  .additional-info {
+    text-align: center;
+    margin: 50px 0;
+    color: white;
+  }
+  
+  .additional-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .platform-badges {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .platform-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .changelog {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .changelog h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .update-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+  }
+  
+  .update-version {
+    font-weight: 700;
+    margin-right: 15px;
+    color: var(--secondary);
+  }
+  
+  .update-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  .update-item ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .update-item li {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
