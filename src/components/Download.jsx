@@ -30,8 +30,8 @@ const Download = () => {
                 <h3>Windows</h3>
               </div>
               <div className="card-body">
-                <p className="version">Version 1.0.0</p>
-                <p className="size">Size: 15.2 MB</p>
+                <p className="version">Version 1.0.1</p>
+                <p className="size">Size: 19.5 MB</p>
                 <ul className="features-list">
                   <li>✓ Full AI Integration</li>
                   <li>✓ Multi-stream Download</li>
@@ -101,19 +101,6 @@ const Download = () => {
               <span className="platform-badge">Linux (Coming Soon)</span>
               <span className="platform-badge">macOS (Coming Soon)</span>
               <span className="platform-badge">Android (Planned)</span>
-            </div>
-          </div>
-
-          <div className="changelog">
-            <h3>Latest Updates</h3>
-            <div className="update-item">
-              <span className="update-version">v1.0.0</span>
-              <span className="update-date">March 1, 2026</span>
-              <ul>
-                <li>Initial release with RL engine</li>
-                <li>Multi-stream download support</li>
-                <li>Real-time AI optimization</li>
-              </ul>
             </div>
           </div>
         </div>

@@ -168,3 +168,243 @@
     padding: 2px 6px;
   }
 }
+/* Add these styles to your existing HowItWorks.css */
+
+.video-tutorial {
+  margin: 40px 0;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background: #000;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+.video-control-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.video-control-btn:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}
+
+.video-timeline {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.video-progress {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+  position: relative;
+  width: 0%;
+}
+
+.video-progress-filled {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.video-time {
+  color: white;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.video-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-info h3 {
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.video-info p {
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.video-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.video-quality {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.download-steps {
+  margin: 40px 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 15px;
+  padding: 40px;
+  color: white;
+}
+
+.download-steps h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.download-step {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.download-step:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: var(--primary);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+.download-step h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.download-step p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    flex-direction: column;
+  }
+  
+  .video-container {
+    max-width: 100%;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .video-info {
+    padding: 20px;
+  }
+  
+  .download-steps {
+    padding: 30px 20px;
+  }
+  
+  .download-steps h3 {
+    font-size: 1.5rem;
+  }
+  
+  .video-controls {
+    opacity: 1;
+    padding: 15px 10px 8px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add loading state for video */
+.video-player:not(:loaded) {
+  background: #f0f0f0;
+}

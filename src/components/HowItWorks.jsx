@@ -1,8 +1,12 @@
-import React from 'react';
-import { FaDownload, FaCogs, FaRocket, FaChartLine, FaBullseye } from 'react-icons/fa';
+import React, { useRef, useState } from 'react';
+import { FaDownload, FaCogs, FaRocket, FaChartLine, FaBullseye, FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import './HowItWorks.css';
 
 const HowItWorks = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const videoRef = useRef(null);
+
   const steps = [
     {
       icon: <FaDownload />,
@@ -31,6 +35,24 @@ const HowItWorks = () => {
     }
   ];
 
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section id="how-it-works" className="how-it-works">
       <div className="container">
@@ -40,6 +62,79 @@ const HowItWorks = () => {
         <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
           Our AI continuously adjusts streams between 1-16, always targeting the optimal 8-12 range
         </p>
+
+        {/* Video Tutorial Section */}
+        <div className="video-tutorial" data-aos="fade-up">
+          <div className="video-wrapper">
+            <div className="video-container">
+              <video 
+                ref={videoRef}
+                className="video-player"
+                poster="/images/tutorial-thumbnail.jpg"
+                onEnded={() => setIsPlaying(false)}
+              >
+                <source src="/working.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              <div className="video-controls">
+                <button className="video-control-btn play-pause" onClick={togglePlay}>
+                  {isPlaying ? <FaPause /> : <FaPlay />}
+                </button>
+                
+                <div className="video-timeline">
+                  <div className="video-progress">
+                    <div className="video-progress-filled" style={{width: '0%'}}></div>
+                  </div>
+                </div>
+                
+                <button className="video-control-btn mute" onClick={toggleMute}>
+                  {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+                </button>
+                
+                <span className="video-time">0:00 / 2:30</span>
+              </div>
+            </div>
+            
+            <div className="video-info">
+              <h3>Complete Installation & Usage Guide</h3>
+              <p>Watch this quick tutorial to get started with TurboLane in minutes</p>
+              <div className="video-meta">
+                <span className="video-badge">
+                  HD Tutorial
+                </span>
+                <span className="video-quality">1080p</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Download Steps Section */}
+        <div className="download-steps" data-aos="fade-up">
+          <h3>Quick Download Guide</h3>
+          <div className="steps-grid">
+            <div className="download-step">
+              <span className="step-number">1</span>
+              <h4>Click Download Button</h4>
+              <p>Find the download button on our homepage or download section</p>
+            </div>
+            <div className="download-step">
+              <span className="step-number">2</span>
+              <h4>Run Installer</h4>
+              <p>Double-click the downloaded .exe file to start installation</p>
+            </div>
+            <div className="download-step">
+              <span className="step-number">3</span>
+              <h4>Follow Setup Wizard</h4>
+              <p>Click "Next" through the simple installation process</p>
+            </div>
+            <div className="download-step">
+              <span className="step-number">4</span>
+              <h4>Launch & Enjoy</h4>
+              <p>Open TurboLane and start downloading at maximum speed</p>
+            </div>
+          </div>
+        </div>
 
         <div className="steps-container">
           {steps.map((step, index) => (
