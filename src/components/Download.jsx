@@ -84,7 +84,7 @@ const Download = () => {
               </div>
               <div className="card-footer">
                 <a 
-                  href="https://github.com/yourusername/turbolane" 
+                  href="https://github.com/Adharsh0/TurboLane-Downloader.git" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn btn-secondary"
