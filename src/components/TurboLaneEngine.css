@@ -1,0 +1,661 @@
+/* ===========================
+   TurboLane Engine Section - Light Theme
+   =========================== */
+
+   .engine-section {
+    position: relative;
+    padding: 120px 0 100px;
+    background: #f8fafc;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    overflow: hidden;
+  }
+  
+
+  .engine-bg-glow {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(0, 120, 212, 0.05) 0%, rgba(22, 199, 154, 0.02) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .engine-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ===========================
+     Header
+     =========================== */
+  
+  .engine-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  
+  .engine-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0078d4;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+  
+  .badge-icon {
+    font-size: 0.9rem;
+  }
+  
+  .engine-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+  }
+  
+  .engine-subtitle {
+    font-size: 1.1rem;
+    color: #475569;
+    max-width: 620px;
+    margin: 0 auto 28px;
+    line-height: 1.75;
+  }
+  
+  /* Requirements section */
+  .engine-requirements {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .install-cmd {
+    background: #1e1e1e;
+    border: 1px solid #333333;
+    color: #00ff9d;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 1.1rem;
+    display: inline-block;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .req-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .req-badge {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Feature chips */
+  .engine-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .chip {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0078d4;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+  
+  /* ===========================
+     Tabs
+     =========================== */
+  
+  .engine-tabs {
+    display: flex;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 6px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .engine-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  
+  .engine-tab:hover {
+    color: #0078d4;
+    background: #f1f5f9;
+  }
+  
+  .engine-tab.active {
+    background: linear-gradient(135deg, #0078d4, #16c79a);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 120, 212, 0.25);
+  }
+  
+  .engine-tab.active svg {
+    color: white;
+  }
+  
+  /* ===========================
+     Panel
+     =========================== */
+  
+  .engine-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .panel-intro {
+    margin-bottom: 24px;
+  }
+  
+  .panel-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  
+  .panel-desc {
+    color: #475569;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  /* ===========================
+     Language Switcher
+     =========================== */
+  
+  .lang-switcher {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #475569;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  
+  .lang-btn:hover {
+    border-color: #0078d4;
+    color: #0078d4;
+    background: #f0f9ff;
+  }
+  
+  .lang-btn.active {
+    border-color: #0078d4;
+    background: #0078d4;
+    color: white;
+  }
+  
+  .lang-btn.active svg {
+    color: white;
+  }
+  
+  /* ===========================
+     Code Block - Black Terminal Style
+     =========================== */
+  
+  .code-block {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333333;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    background: #1e1e1e;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d2d;
+    padding: 10px 18px;
+    border-bottom: 1px solid #404040;
+  }
+  
+  .code-lang {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #00ff9d;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #3d3d3d;
+    border: 1px solid #555555;
+    color: #cccccc;
+    font-size: 0.76rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  
+  .copy-btn:hover {
+    border-color: #00ff9d;
+    color: #00ff9d;
+    background: #4d4d4d;
+  }
+  
+  .code-content {
+    background: #1e1e1e;
+    padding: 22px 24px;
+    overflow-x: auto;
+    margin: 0;
+  }
+  
+  .code-content code {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  }
+  
+  /* Terminal-specific styling */
+  .bash-terminal {
+    background: #1e1e1e;
+  }
+  
+  /* Syntax highlighting for terminal */
+  .c-keyword  { color: #569cd6; font-weight: 600; }  /* Commands in blue */
+  .c-flag     { color: #ffd700; }                     /* --flags in gold */
+  .c-path     { color: #00ff9d; }                     /* Paths in green */
+  .c-number   { color: #ff98b6; }                     /* Numbers in pink */
+  .c-comment  { color: #6a9955; font-style: italic; } /* Comments in green */
+  .c-string   { color: #ce9178; }                     /* Strings in orange */
+  .c-class    { color: #4ec9b0; }                     /* Classes in teal */
+  
+  /* Windows drive letters */
+  .c-path {
+    color: #00ff9d;
+  }
+  
+  /* IP addresses */
+  .c-number {
+    color: #ff98b6;
+  }
+  
+  /* ===========================
+     Mode Comparison - Light
+     =========================== */
+  
+  .mode-comparison {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mode-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+  }
+  
+  .mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .mode-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s;
+  }
+  
+  .mode-card:hover {
+    border-color: #0078d4;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.1);
+  }
+  
+  .mode-name {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0078d4;
+    margin-bottom: 8px;
+  }
+  
+  .mode-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+  
+  /* ===========================
+     Metrics Table - Light
+     =========================== */
+  
+  .metrics-wrapper {
+    margin-bottom: 40px;
+  }
+  
+  .metrics-table {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .metrics-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  
+  .metrics-subtitle {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .metrics-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .metric-item {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .metric-name {
+    min-width: 120px;
+    font-weight: 600;
+    color: #0078d4;
+    font-size: 0.95rem;
+  }
+  
+  .metric-source {
+    color: #475569;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* ===========================
+     FAQ - Light
+     =========================== */
+  
+  .faq-section {
+    margin-bottom: 48px;
+  }
+  
+  .faq-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #ffffff;
+  }
+  
+  .faq-item:hover,
+  .faq-item.open {
+    border-color: #0078d4;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.1);
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 0.95rem;
+    gap: 12px;
+  }
+  
+  .faq-question svg {
+    flex-shrink: 0;
+    color: #0078d4;
+    font-size: 0.85rem;
+  }
+  
+  .faq-answer {
+    padding: 0 20px 18px;
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 14px;
+    white-space: pre-line;
+  }
+  
+  /* ===========================
+     License Notice - Light
+     =========================== */
+  
+  .license-notice {
+    text-align: center;
+    margin: 40px 0;
+    padding: 16px;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .license-text {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  /* ===========================
+     CTA Buttons - Light
+     =========================== */
+  
+  .engine-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .engine-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+  }
+  
+  .engine-section .btn-primary {
+    background: linear-gradient(135deg, #0078d4, #16c79a);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.25);
+  }
+  
+  .engine-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.35);
+  }
+  
+  .engine-section .btn-secondary {
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+  
+  .engine-section .btn-secondary:hover {
+    border-color: #0078d4;
+    color: #0078d4;
+    background: #f0f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.15);
+  }
+  
+  /* ===========================
+     Gradient text
+     =========================== */
+  
+  .engine-section .gradient-text {
+    background: linear-gradient(135deg, #0078d4 0%, #16c79a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* ===========================
+     Responsive
+     =========================== */
+  
+  @media (max-width: 768px) {
+    .engine-section {
+      padding: 80px 0 60px;
+    }
+  
+    .engine-panel {
+      padding: 20px 16px;
+    }
+  
+    .engine-tabs {
+      gap: 4px;
+    }
+  
+    .engine-tab span {
+      display: none;
+    }
+  
+    .engine-tab {
+      padding: 10px 14px;
+    }
+  
+    .mode-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .metric-item {
+      flex-direction: column;
+      gap: 6px;
+    }
+  
+    .metric-name {
+      min-width: auto;
+    }
+  
+    .install-cmd {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .engine-cta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .engine-section .btn {
+      justify-content: center;
+    }
+  
+    .lang-switcher {
+      flex-direction: column;
+    }
+  
+    .lang-btn {
+      justify-content: center;
+    }
+  }

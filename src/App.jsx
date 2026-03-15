@@ -7,6 +7,7 @@ import Features from './components/Features';
 import AIShowcase from './components/AIShowcase';
 import HowItWorks from './components/HowItWorks';
 import Download from './components/Download';
+import TurboLaneEngine from './components/TurboLaneEngine';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
       <Features />
       <AIShowcase />
       <HowItWorks />
+      <TurboLaneEngine />
       <Download />
       <Footer />
     </div>

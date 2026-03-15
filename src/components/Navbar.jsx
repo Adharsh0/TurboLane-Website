@@ -28,6 +28,7 @@ const Navbar = () => {
           <Link to="features" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Features</Link>
           <Link to="ai-showcase" smooth={true} duration={500} onClick={() => setIsOpen(false)}>AI Engine</Link>
           <Link to="how-it-works" smooth={true} duration={500} onClick={() => setIsOpen(false)}>How It Works</Link>
+          <Link to="turbolane-engine" smooth={true} duration={500} onClick={() => setIsOpen(false)}>For Developers</Link>
           <Link to="download" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
             <button className="nav-download-btn">Download</button>
           </Link>
