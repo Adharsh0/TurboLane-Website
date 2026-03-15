@@ -328,25 +328,6 @@
     background: #1e1e1e;
   }
   
-  /* Syntax highlighting for terminal */
-  .c-keyword  { color: #569cd6; font-weight: 600; }  /* Commands in blue */
-  .c-flag     { color: #ffd700; }                     /* --flags in gold */
-  .c-path     { color: #00ff9d; }                     /* Paths in green */
-  .c-number   { color: #ff98b6; }                     /* Numbers in pink */
-  .c-comment  { color: #6a9955; font-style: italic; } /* Comments in green */
-  .c-string   { color: #ce9178; }                     /* Strings in orange */
-  .c-class    { color: #4ec9b0; }                     /* Classes in teal */
-  
-  /* Windows drive letters */
-  .c-path {
-    color: #00ff9d;
-  }
-  
-  /* IP addresses */
-  .c-number {
-    color: #ff98b6;
-  }
-  
   /* ===========================
      Mode Comparison - Light
      =========================== */

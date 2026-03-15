@@ -5,32 +5,6 @@ import {
 } from 'react-icons/fa';
 import './TurboLaneEngine.css';
 
-// ── Syntax highlighter ────────────────────────────────────────────────────────
-function highlightCode(code, lang) {
-  const e = code
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-
-  if (lang === 'bash') {
-    return e
-      .replace(/(#.*)/g, '<span class="c-comment">$1</span>')
-      .replace(/\b(pip|install|turbolane-server|send|start|turbolane-cli)\b/g, '<span class="c-keyword">$1</span>')
-      .replace(/(--[\w-]+)/g, '<span class="c-flag">$1</span>')
-      .replace(/(\s\/[\w\/\.\-]+|\s[\w\.\-]+\.\w{2,4}\b)/g, '<span class="c-path">$1</span>')
-      .replace(/\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b/g, '<span class="c-number">$1</span>');
-  }
-  if (lang === 'python') {
-    return e
-      .replace(/(#.*)/g, '<span class="c-comment">$1</span>')
-      .replace(/\b(import|from|def|class|return|async|await|with|as|True|False|None|if|else|for|in|not|while|nonlocal|and|or)\b/g, '<span class="c-keyword">$1</span>')
-      .replace(/(".*?"|'.*?')/g, '<span class="c-string">$1</span>')
-      .replace(/\b(\d+\.?\d*)\b/g, '<span class="c-number">$1</span>')
-      .replace(/\b([A-Z][A-Za-z0-9]+)\b/g, '<span class="c-class">$1</span>');
-  }
-  return e;
-}
-
 // ── CodeBlock ─────────────────────────────────────────────────────────────────
 function CodeBlock({ code, language = 'bash' }) {
   const [copied, setCopied] = useState(false);
@@ -48,7 +22,7 @@ function CodeBlock({ code, language = 'bash' }) {
         </button>
       </div>
       <pre className={`code-content${language === 'bash' ? ' bash-terminal' : ''}`}>
-        <code dangerouslySetInnerHTML={{ __html: highlightCode(code, language) }} />
+        <code>{code}</code>
       </pre>
     </div>
   );
